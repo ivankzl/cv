@@ -12,26 +12,26 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import ar.edu.um.dao.Curso;
+import ar.edu.um.dao.Cv;
 import ar.edu.um.service.CursosService;
+import ar.edu.um.service.CvService;
 
 
 @Controller
-public class CursoController {
+public class CvController {
 	
-	private CursosService cursosService;
+	private CvService cvService;
 	
 	@Autowired
-	public void setCursosService(CursosService cursosService) {
-		this.cursosService = cursosService;
+	public void setCursosService(CvService cvService) {
+		this.cvService = cvService;
 	}
 	
 	/* muestra los cursos que hay en la BD */
 	@RequestMapping(value="/")
 	public String showTest (Model model) {
 
-		List<Curso> cursos = cursosService.getCurrent();
-		model.addAttribute("cursos", cursos);
 
-		return "cursos";
+		return "cv";
 	}
 }

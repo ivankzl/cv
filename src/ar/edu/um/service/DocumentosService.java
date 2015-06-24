@@ -8,8 +8,7 @@ import org.springframework.stereotype.Service;
 import ar.edu.um.dao.Alumno;
 import ar.edu.um.dao.Documento;
 import ar.edu.um.dao.DocumentosDAO;
-import ar.edu.um.dao.Inscripcion;
-import ar.edu.um.dao.InscripcionesDAO;
+
 
 @Service("documentosService")
 public class DocumentosService {
