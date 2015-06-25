@@ -26,12 +26,12 @@ public class CvController {
 		this.cvService = cvService;
 	}
 	
-	/* muestra los cursos que hay en la BD */ /*
-	@RequestMapping(value="/")
+	/* muestra los cursos que hay en la BD */ 
+	@RequestMapping(value="/registro")
 	public String showTest (Model model) {
 
 
-		return "cv";
+		return "registro";
 	}
-	*/
+	
 }
