@@ -2,7 +2,7 @@
 <web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee">
-  <display-name>users</display-name>
+  <display-name>cv</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
@@ -13,19 +13,19 @@
   </welcome-file-list>
   <servlet>
     <description></description>
-    <display-name>cursos</display-name>
-    <servlet-name>cursos</servlet-name>
+    <display-name>cv</display-name>
+    <servlet-name>cv</servlet-name>
     <servlet-class>org.springframework.web.servlet.DispatcherServlet
 		</servlet-class>
     <load-on-startup>1</load-on-startup>
   </servlet>
   <servlet-mapping>
-    <servlet-name>cursos</servlet-name>
+    <servlet-name>cv</servlet-name>
     <url-pattern>/</url-pattern>
   </servlet-mapping>
   <resource-ref>
     <description>DB Connection</description>
-    <res-ref-name>jdbc/eadcursos</res-ref-name>
+    <res-ref-name>jdbc/cv</res-ref-name>
     <res-type>javax.sql.DataSource</res-type>
     <res-auth>Container</res-auth>
   </resource-ref>
@@ -38,8 +38,7 @@
     <param-value>
 			classpath:ar/edu/um/config/dao-context.xml
 			classpath:ar/edu/um/config/service-context.xml
-			classpath:ar/edu/um/config/mail-bean.xml
-
+			classpath:ar/edu/um/config/spring-security.xml
 		</param-value>
   </context-param>
   

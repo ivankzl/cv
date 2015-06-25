@@ -14,6 +14,8 @@ import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Component;
 
+import ar.edu.um.model.Alumno;
+
 @Component("alumnosDao")
 public class AlumnosDAO {
 	private NamedParameterJdbcTemplate jdbc;

@@ -1,4 +1,4 @@
-package ar.edu.um.dao;
+package ar.edu.um.model;
 
 public class Alumno {
 	
