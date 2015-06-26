@@ -37,7 +37,8 @@
 					<h1>Currículum Vitae</h1>
 					<p>Seleccione una categoría para cargar/editar sus datos:</p>
 					<p>
-						<a class="btn btn-primary btn-lg" href="#" role="button">Datos Personales</a>
+						<!-- FIX HREF -->
+						<a class="btn btn-primary btn-lg" href="http://localhost:8080/spring/datos" role="button">Datos Personales</a>
 						<a class="btn btn-primary btn-lg" href="#" role="button">Formación</a>
 						<a class="btn btn-primary btn-lg" href="#" role="button">Cargos</a>
 						<a class="btn btn-primary btn-lg" href="#" role="button">Antecedentes</a>
