@@ -1,45 +1,37 @@
 package ar.edu.um.model;
 
-import java.util.HashSet;
+import java.math.BigDecimal;
 import java.util.Set;
 
 public class User {
 
-	private String username;
+	private BigDecimal DNI;
 	private String password;
-	private boolean enabled;
-	private Set<UserRole> userRole = new HashSet<UserRole>(0);
-
-	public String getUsername() {
-		return username;
+	private int enabled;
+	public BigDecimal getDNI() {
+		return DNI;
 	}
-
-	public void setUsername(String username) {
-		this.username = username;
+	public void setDNI(BigDecimal DNI) {
+		this.DNI = DNI;
 	}
-
 	public String getPassword() {
 		return password;
 	}
-
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
-	public boolean isEnabled() {
+	public int getEnabled() {
 		return enabled;
 	}
-
-	public void setEnabled(boolean enabled) {
+	public void setEnabled(int enabled) {
 		this.enabled = enabled;
 	}
-
-	public Set<UserRole> getUserRole() {
-		return userRole;
+	@Override
+	public String toString() {
+		return "User [DNI=" + DNI + ", password=" + password + ", enabled="
+				+ enabled + "]";
 	}
-
-	public void setUserRole(Set<UserRole> userRole) {
-		this.userRole = userRole;
-	}
+	
+	
 
 }

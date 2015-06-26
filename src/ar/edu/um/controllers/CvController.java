@@ -34,4 +34,16 @@ public class CvController {
 		return "registro";
 	}
 	
+	@RequestMapping(value="/cv")
+	public String cv (Model model){
+		
+		return "cv";
+	}
+	
+	@RequestMapping(value="/datos")
+	public String datos (Model model){
+		
+		return "datos";
+	}
+	
 }

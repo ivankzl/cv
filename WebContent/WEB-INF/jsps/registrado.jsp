@@ -20,10 +20,9 @@
 				<div class="contenido2"><h1 class="universidadFondo">Confirmación de Inscripción</h1></div>	
 			</div>
 			<div class="panel-body">
-				<p>Usted fue inscripto correctamente. En los próximos días recibirá la chequera en su email. </p><br>
+				<p>Usted se registró correctamente. </p><br>
 				<p>
-					<a href="${pageContext.request.contextPath}/"> Volver a
-						cursos</a>
+					<a href="${pageContext.request.contextPath}/"> Volver a la página principal</a>
 				</p>
 			</div>
 			<!--panel body-->

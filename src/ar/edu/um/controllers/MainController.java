@@ -1,18 +1,33 @@
 package ar.edu.um.controllers;
 
+import java.math.BigDecimal;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+
+import ar.edu.um.model.User;
+import ar.edu.um.service.UsersService;
  
 @Controller
 public class MainController {
  
+	private UsersService usersService;
+	
+	@Autowired
+	public void setUsersService(UsersService usersService) {
+		this.usersService = usersService;
+	}
+	
+	
 	@RequestMapping(value = { "/", "/welcome**" }, method = RequestMethod.GET)
 	public ModelAndView defaultPage() {
  
@@ -52,7 +67,40 @@ public class MainController {
 	  return model;
  
 	}
+	
+	@RequestMapping(value = "/registro", method = RequestMethod.GET)
+	public ModelAndView login(@RequestParam(value = "error", required = false) String error) {
  
+	  ModelAndView model = new ModelAndView();
+	  if (error != null) {
+		model.addObject("error", "Invalid username and password!");
+	  }
+ 
+	  model.setViewName("registro");
+ 
+	  return model;
+ 
+	}
+	
+	@RequestMapping(value="/registrado", method=RequestMethod.POST)
+	public String confirmaRegistro(Model model, @RequestParam("DNI") BigDecimal DNI, @RequestParam("password") String password) {
+
+
+		
+		User user = new User();
+		user.setDNI(DNI);
+		user.setPassword(password);
+	   
+		
+		System.out.println(user);
+		
+		usersService.create(user);
+		
+		
+		return "registrado";
+	}
+	
+	
 	//for 403 access denied page
 	@RequestMapping(value = "/403", method = RequestMethod.GET)
 	public ModelAndView accesssDenied() {
