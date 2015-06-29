@@ -51,7 +51,14 @@
 					method="post"
 					action="${pageContext.request.contextPath}/creardatos"
 					modelAttribute="alumno">
-
+		
+					<!-- DNI // sacar y traer del login -->
+					<div class="form-group">
+						<label for="inputName">DNI</label> <input type="text"
+							id="dni" class="form-control" path="dni"
+							name="dni" placeholder="DNI">
+						<form:errors cssClass="error" path="dni"></form:errors>
+					</div>
 
 					<!-- NOMBRE -->
 					<div class="form-group">
@@ -73,9 +80,9 @@
 					<div class="form-group">
 						<div class="dropdown">
 							<label for="inputNumDoc">Sexo</label><br> <select
-								class="form-control" path="alu_sexo" id="alu_sexo"
-								name="alu_sexo"><form:errors cssClass="error"
-									path="alu_sexo"></form:errors>
+								class="form-control" path="sexo" id="sexo"
+								name="sexo"><form:errors cssClass="error"
+									path="sexo"></form:errors>
 								<option value="NONE" label="Seleccione un Sexo"></option>
 								<option value="M">Masculino</option>
 								<option value="F">Femenino</option>
@@ -104,7 +111,7 @@
 						<label for="inputEmail">Email</label> <input type="email"
 							class="form-control" id="email" path="email"
 							name="email" placeholder="Email">
-						<form:errors cssClass="error" path="alu_email"></form:errors>
+						<form:errors cssClass="error" path="email"></form:errors>
 					</div>
 
 					<!-- FECHA DE NACIMIENTO -->
@@ -483,16 +490,16 @@
 					<!-- TELEFONO -->
 					<div class="form-group">
 						<label for="inputTel">Telefono</label> <input type="text"
-							class="form-control" id="alu_telefono" path="alu_telefono"
-							name="alu_telefono" placeholder="Telefono">
+							class="form-control" id="telefono" path="telefono"
+							name="telefono" placeholder="Telefono">
 						<form:errors cssClass="error" path="telefono"></form:errors>
 					</div>
 					
 					<!-- CUIL/CUIT -->
 					<div class="form-group">
 						<label for="inputCuil">CUIL/CUIT</label> <input type="text"
-							class="form-control" id="CUIL" path="CUIL"
-							name="CUIL" placeholder="CUIL/CUIT">
+							class="form-control" id="CUIL_CUIT" path="CUIL_CUIT"
+							name="CUIL_CUIT" placeholder="CUIL/CUIT">
 						<form:errors cssClass="error" path="CUIL"></form:errors>
 					</div>
 
@@ -500,8 +507,8 @@
 					<!-- DOMICILIO -->
 					<div class="form-group">
 						<label for="inputDomicilio">Domicilio</label> <input type="text"
-							class="form-control" path="alu_domicilio" id="alu_domicilio "
-							name="alu_domicilio" placeholder="Domicilio">
+							class="form-control" path="domicilio" id="domicilio "
+							name="domicilio" placeholder="Domicilio">
 						<form:errors cssClass="error" path="domicilio"></form:errors>
 					</div>
 					

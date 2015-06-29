@@ -8,11 +8,13 @@ import javax.sql.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Component;
 
 import ar.edu.um.model.DatosPersonales;
+import ar.edu.um.model.User;
 
 @Component("datosPersonalesDao")
 public class DatosPersonalesDAO {
@@ -65,6 +67,14 @@ private NamedParameterJdbcTemplate jdbc;
 		   catch(EmptyResultDataAccessException erdae) {
 		       return null;
 		   }
+	}
+	
+	/*Crear datos personales nuevos*/
+	public boolean create(DatosPersonales datosPersonales) {
+
+		BeanPropertySqlParameterSource params = new BeanPropertySqlParameterSource(datosPersonales);
+		return jdbc.update("insert into datos_personales (dni, nombre, apellido, sexo, estado_civil, email, fecha_nac, nacionalidad, CUIL_CUIT, domicilio, departamento, provincia, pais) values (:dni, :nombre, :apellido, :sexo, :estado_civil, :email, :fecha_nac, :nacionalidad, :CUIL_CUIT, :domicilio, :departamento, :provincia, :pais)", params) == 1;
+
 	}
 
 }
