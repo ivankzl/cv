@@ -39,7 +39,7 @@
 					<p>
 						<!-- FIX HREF -->
 						<a class="btn btn-primary btn-lg" href="http://localhost:8080/spring/datos" role="button">Datos Personales</a>
-						<a class="btn btn-primary btn-lg" href="#" role="button">Formación</a>
+						<a class="btn btn-primary btn-lg" href="http://localhost:8080/spring/formacion" role="button">Formación</a>
 						<a class="btn btn-primary btn-lg" href="#" role="button">Cargos</a>
 						<a class="btn btn-primary btn-lg" href="#" role="button">Antecedentes</a>
 						<a class="btn btn-primary btn-lg" href="#" role="button">Producción</a>

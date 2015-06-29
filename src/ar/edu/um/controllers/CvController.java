@@ -41,9 +41,16 @@ public class CvController {
 	}
 	
 	@RequestMapping(value="/datos")
-	public String datos (Model model){
+	public String datos(Model model){
 		
 		return "datos";
+	}
+	
+
+	@RequestMapping(value="/formacion")
+	public String formacion(Model model){
+		
+		return "formacion";
 	}
 	
 }

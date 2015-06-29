@@ -50,7 +50,7 @@
 				<form:form id="registration-form" class="form-horizontal"
 					method="post"
 					action="${pageContext.request.contextPath}/creardatos"
-					modelAttribute="alumno">
+					modelAttribute="dp">
 		
 					<!-- DNI // sacar y traer del login -->
 					<div class="form-group">
