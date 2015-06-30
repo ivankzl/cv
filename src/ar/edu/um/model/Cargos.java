@@ -102,5 +102,21 @@ public class Cargos{
 		this.otros_cargos = otros_cargos;
 	}
 
+	@Override
+	public String toString() {
+		return "Cargos [dni=" + dni + ", nivel_superior_universitario="
+				+ nivel_superior_universitario
+				+ ", nivel_terciario_no_universitario="
+				+ nivel_terciario_no_universitario + ", nivel_basico="
+				+ nivel_basico + ", cursos_posgrado_y_capacitaciones="
+				+ cursos_posgrado_y_capacitaciones + ", cargos_organismos_ct="
+				+ cargos_organismos_ct
+				+ ", categorizacion_programa_incentivos="
+				+ categorizacion_programa_incentivos + ", cargos_id_otro="
+				+ cargos_id_otro + ", cargos_gestion_institucional="
+				+ cargos_gestion_institucional + ", otros_cargos="
+				+ otros_cargos + "]";
+	}
+
 
 }

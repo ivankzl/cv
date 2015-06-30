@@ -53,4 +53,10 @@ public class CvController {
 		return "formacion";
 	}
 	
+	@RequestMapping(value="/cargos")
+	public String cargos(Model model){
+		
+		return "cargos";
+	}
+	
 }
