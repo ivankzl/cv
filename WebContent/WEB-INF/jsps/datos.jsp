@@ -41,8 +41,8 @@
 						Personales</a> <a class="btn btn-default btn-lg"
 						href="http://localhost:8080/spring/cv" role="button">Formación</a>
 					<a class="btn btn-default btn-lg" href="http://localhost:8080/spring/cargos" role="button">Cargos</a>
-					<a class="btn btn-default btn-lg" href="#" role="button">Antecedentes</a>
-					<a class="btn btn-default btn-lg" href="#" role="button">Producción</a>
+					<a class="btn btn-default btn-lg" href="http://localhost:8080/spring/antecedentes" role="button">Antecedentes</a>
+					<a class="btn btn-default btn-lg" href="http://localhost:8080/spring/produccion" role="button">Producción</a>
 					<a class="btn btn-default btn-lg" href="#" role="button">Otros
 						Antecedentes</a>
 				</p>

@@ -36,9 +36,9 @@
 						Personales</a> 
 						<a class="btn btn-primary btn-lg"
 						href="http://localhost:8080/spring/formacion" role="button">Formación</a>
-					<a class="btn btn-default btn-lg" href="#" role="button">Cargos</a>
-					<a class="btn btn-default btn-lg" href="#" role="button">Antecedentes</a>
-					<a class="btn btn-default btn-lg" href="#" role="button">Producción</a>
+					<a class="btn btn-default btn-lg" href="http://localhost:8080/spring/cargos" role="button">Cargos</a>
+					<a class="btn btn-default btn-lg" href="http://localhost:8080/spring/antecedentes" role="button">Antecedentes</a>
+					<a class="btn btn-default btn-lg" href="http://localhost:8080/spring/produccion" role="button">Producción</a>
 					<a class="btn btn-default btn-lg" href="#" role="button">Otros
 						Antecedentes</a>
 				</p>
@@ -60,7 +60,7 @@
 						<h3>Formación Académica</h3>
 					</div>
 					
-					<!-- Nivel Universitario de postgrado -->
+					<!-- Nivel Universitario de posgrado -->
 					<div class="form-group">
 						<label for="inputNivelUniversitarioPosgrado">Nivel Universitario de Posgrado</label> <input
 							type="text" id="nivel_universitario_posgrado" path="nivel_universitario_posgrado" name="nivel_universitario_posgrado" class="form-control"
