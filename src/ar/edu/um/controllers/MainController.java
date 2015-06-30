@@ -27,7 +27,7 @@ public class MainController {
 		this.usersService = usersService;
 	}
 	
-	
+/*	
 	@RequestMapping(value = { "/", "/welcome**" }, method = RequestMethod.GET)
 	public ModelAndView defaultPage() {
  
@@ -38,7 +38,7 @@ public class MainController {
 	  return model;
  
 	}
- 
+ */
 	@RequestMapping(value = "/admin**", method = RequestMethod.GET)
 	public ModelAndView adminPage() {
  

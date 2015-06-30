@@ -11,6 +11,7 @@
 		<config>src/ar/edu/um/config/service-context.xml</config>
 		<config>src/ar/edu/um/config/spring-security.xml</config>
 		<config>WebContent/WEB-INF/cv-servlet.xml</config>
+		<config>src/ar/edu/um/config/spring-database.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
@@ -6,11 +7,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" href="resources/bootstrap-3.3.4-dist/css/bootstrap.css" />
-	<link rel="stylesheet" href="resources/bootstrap-3.3.4-dist/style.css" />
-	<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Archivo+Narrow:400,700,700italic,400italic">
-	<script	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<meta charset="UTF-8">
+<link rel="stylesheet"
+	href="resources/bootstrap-3.3.4-dist/css/bootstrap.css" />
+<link rel="stylesheet" href="resources/bootstrap-3.3.4-dist/style.css" />
+<link type="text/css" rel="stylesheet"
+	href="http://fonts.googleapis.com/css?family=Archivo+Narrow:400,700,700italic,400italic">
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -25,26 +29,43 @@
 		<img src="resources/imagenes/marca.png">
 		<div class="well">
 			<div class="container">
+			
+				<c:url value="/j_spring_security_logout" var="logoutUrl" />
+				
+				<form action="${logoutUrl}" method="post" id="logoutForm">
+					<input type="hidden" name="${_csrf.parameterName}"
+						value="${_csrf.token}" />
+				</form>
 				
 				<h1>Currículum Vitae</h1>
 				<p>Seleccione una categoría para cargar/editar sus datos:</p>
 				<p>
 					<!-- FIX HREF -->
-					<a class="btn btn-primary btn-lg" href="http://localhost:8080/spring/datos" role="button">Datos Personales</a>
-					<a class="btn btn-primary btn-lg" href="http://localhost:8080/spring/formacion" role="button">Formación</a>
-					<a class="btn btn-primary btn-lg" href="http://localhost:8080/spring/cargos" role="button">Cargos</a>
-					<a class="btn btn-primary btn-lg" href="http://localhost:8080/spring/antecedentes" role="button">Antecedentes</a>
-					<a class="btn btn-primary btn-lg" href="http://localhost:8080/spring/produccion" role="button">Producción</a>
-					<a class="btn btn-primary btn-lg" href="#" role="button">Otros Antecedentes</a>
+					<a class="btn btn-primary btn-lg"
+						href="http://localhost:8080/spring/datos" role="button">Datos
+						Personales</a> <a class="btn btn-primary btn-lg"
+						href="http://localhost:8080/spring/formacion" role="button">Formación</a>
+					<a class="btn btn-primary btn-lg"
+						href="http://localhost:8080/spring/cargos" role="button">Cargos</a>
+					<a class="btn btn-primary btn-lg"
+						href="http://localhost:8080/spring/antecedentes" role="button">Antecedentes</a>
+					<a class="btn btn-primary btn-lg"
+						href="http://localhost:8080/spring/produccion" role="button">Producción</a>
+					<a class="btn btn-primary btn-lg" href="#" role="button">Otros
+						Antecedentes</a>
 				</p>
-	
-			</div><!--container-->
+
+			</div>
+			<!--container-->
 		</div>
 	</div>
 
-	<script	src="resources/bootstrap-3.3.4-dist/assets/js/jquery-1.7.1.min.js"></script>
-	<script	src="resources/bootstrap-3.3.4-dist/assets/js/jquery.validate.js"></script>
-	<script	src="resources/bootstrap-3.3.4-dist/assets/js/jquery.validate.min.js"></script>
+	<script
+		src="resources/bootstrap-3.3.4-dist/assets/js/jquery-1.7.1.min.js"></script>
+	<script
+		src="resources/bootstrap-3.3.4-dist/assets/js/jquery.validate.js"></script>
+	<script
+		src="resources/bootstrap-3.3.4-dist/assets/js/jquery.validate.min.js"></script>
 	<script src="resources/bootstrap-3.3.4-dist/script.js"></script>
 
 	<script>
@@ -83,9 +104,11 @@
 						<p>Boulogne Sur Mer 683. CP 5500. Mendoza, Argentina
 							Teléfonos: 54 261 4202017. Fax: 54 261 4202017 (Opción 9)</p>
 					</div>
-				</div><!--col-6-->
+				</div>
+				<!--col-6-->
 			</div>
-		</div><!--well-->
+		</div>
+		<!--well-->
 	</div>
 </footer>
 </html>

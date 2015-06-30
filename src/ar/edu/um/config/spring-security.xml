@@ -10,13 +10,14 @@
 	<http auto-config="true" use-expressions="true">
  
 		<intercept-url pattern="/admin**" access="hasRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/cv**" access="hasRole('ROLE_USER')" />
  
 		<!-- access denied page -->
 		<access-denied-handler error-page="/403" />
  
 		<form-login 
 		    login-page="/login" 
-		    default-target-url="/login" 
+		    default-target-url="/cv" 
 			authentication-failure-url="/login?error" 
 			username-parameter="username"
 			password-parameter="password" />
@@ -30,9 +31,9 @@
 	  <authentication-provider>
 		<jdbc-user-service data-source-ref="dataSource"
 		  users-by-username-query=
-		    "select username,password, enabled from users where username=?"
+		    "select DNI,password, enabled from users where DNI=?"
 		  authorities-by-username-query=
-		    "select username, role from user_roles where username =?  " />
+		    "select DNI, role from user_roles where DNI =?  " />
 	  </authentication-provider>
 	</authentication-manager>
  

@@ -27,7 +27,12 @@
 		<img src="resources/imagenes/marca.png">
 		<div class="well">
 			<div class="container">
-
+				<c:url value="/j_spring_security_logout" var="logoutUrl" />
+				
+				<form action="${logoutUrl}" method="post" id="logoutForm">
+					<input type="hidden" name="${_csrf.parameterName}"
+						value="${_csrf.token}" />
+				</form>
 				<h1>Currículum Vitae</h1>
 				<p>Seleccione una categoría para ver/editar sus datos:</p>
 				<p>
