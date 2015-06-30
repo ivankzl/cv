@@ -69,9 +69,9 @@
 					<div class="form-group">
 						<label for="inputNivelSuperiorUniversitarioyPosgrado">Nivel
 							superior universitario y/o posgrado</label> <input type="text"
-							class="form-control" id="nivel_superior_universitario_posgrado"
-							path="nivel_superior_universitario_posgrado"
-							name="nivel_superior_universitario_posgrado"
+							class="form-control" id="nivel_superior_universitario"
+							path="nivel_superior_universitario"
+							name="nivel_superior_universitario"
 							placeholder="Nivel superioruniversitario y/o posgrado">
 					</div>
 					<!-- nivel terciario no universitario -->
@@ -79,14 +79,14 @@
 						<label for="inputNivelTerciarioNoUniversitario">Nivel
 							terciario no universitario</label> <input type="text"
 							class="form-control" id="nivel_terciario_no_universitario"
-							path="nivel_terciario_no_universitario"
+							path="nivel_terciario_no_universitario" name="nivel_terciario_no_universitario"
 							placeholder="Nivel terciario no universitario">
 					</div>
 					<!-- Nivel basico y/o medio -->
 					<div class="form-group">
 						<label for="inputNivelBasicoyMedio">Nivel basico y/o medio</label>
 						<input type="text" class="form-control" id="nivel_basico"
-							path="nivel_basico"
+							path="nivel_basico" name ="nivel_basico"
 							placeholder="Nivel terciario no universitario">
 					</div>
 					<!-- Cursos de posgrado y/o capacitaciones extracurriculares -->
@@ -95,7 +95,7 @@
 							de posgrado y/o capacitaciones extracurriculares</label> <input
 							type="text" class="form-control"
 							id="cursos_posgrado_y_capacitaciones"
-							path="cursos_posgrado_y_capacitaciones"
+							path="cursos_posgrado_y_capacitaciones" name="cursos_posgrado_y_capacitaciones"
 							placeholder="Cursos de posgrado y/o capacitaciones extracurriculares">
 					</div>
 
@@ -109,7 +109,7 @@
 						<label for="inputCargosEnOrganismosCT">Cargos en
 							organismos científico-tecnológicos</label> <input type="text"
 							class="form-control" id="cargos_organismos_ct"
-							path="cargos_organismos_ct"
+							path="cargos_organismos_ct" name="cargos_organismos_ct"
 							placeholder="Cargos en organismos científico-tecnológicos">
 					</div>
 					<!-- Categorización del programa de incentivos -->
@@ -117,14 +117,14 @@
 						<label for="inputCategorizacionProgramaIncentivos">Categorización
 							del programa de incentivos</label> <input type="text"
 							class="form-control" id="categorizacion_programa_incentivos"
-							path="categorizacion_programa_incentivos"
+							path="categorizacion_programa_incentivos" name="categorizacion_programa_incentivos"
 							placeholder="Categorización del programa de incentivos">
 					</div>
 					<!-- Cargos I+D en otro tipo de institucines -->
 					<div class="form-group">
 						<label for="inputCargosIDenOtroTipodeInstituciones">Cargos
 							I+D en otro tipo de institucines</label> <input type="text"
-							class="form-control" id="cargos_id_otro" path="cargos_id_otro"
+							class="form-control" id="cargos_id_otro" path="cargos_id_otro" name="cargos_id_otro"
 							placeholder="Cargos I+D en otro tipo de institucines">
 					</div>
 
@@ -138,7 +138,7 @@
 						<label for="inputCargosenGestionInstitucional">Cargos en
 							gestion institucional</label> <input type="text" class="form-control"
 							id="cargos_gestion_institucional"
-							path="cargos_gestion_institucional"
+							path="cargos_gestion_institucional" name="cargos_gestion_institucional"
 							placeholder="Cargos en gestion institucional">
 					</div>
 
@@ -151,17 +151,10 @@
 					<div class="form-group">
 						<label for="inputOtrosCargos">Otros Cargos</label> <input
 							type="text" class="form-control" id="otros_cargos"
-							path="otros_cargos" placeholder="Otros Cargos">
+							path="otros_cargos" name="otros_cargos" placeholder="Otros Cargos">
 					</div>
 
-					<!-- BOTON SIGUIENTE -->
-					<div class="row">
-						<div class="col-md-4"></div>
-						<div class="col-md-4">
-							<button type="submit" class="btn-siguiente">Siguiente</button>
-						</div>
-						<div class="col-md-4"></div>
-					</div>
+						<button type="submit" class="btn btn-primary">Enviar</button>
 
 				</form:form>
 			</div>

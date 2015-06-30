@@ -22,10 +22,10 @@ public class CargosDAO {
 
 	/*Crear datos cargos*/
 	public boolean create(Cargos cargos) {
-
+		System.out.println(cargos.toString());
 		BeanPropertySqlParameterSource params = new BeanPropertySqlParameterSource(cargos);
 		return jdbc.update("insert into cargos (dni, nivel_superior_universitario, nivel_terciario_no_universitario, nivel_basico, cursos_posgrado_y_capacitaciones, cargos_organismos_ct, categorizacion_programa_incentivos, cargos_id_otro, cargos_gestion_institucional, otros_cargos)"
-				+ " values (:dni, : nivel_superior_universitario, :nivel_terciario_no_universitario, :nivel_basico,cursos_posgrado_y_capacitaciones, :cargos_organismos_ct, :categorizacion_programa_incentivos, :cargos_id_otro,cargos_gestion_institucional, :otros_cargos)", params) == 1;
+				+ " values (:dni, :nivel_superior_universitario, :nivel_terciario_no_universitario, :nivel_basico, :cursos_posgrado_y_capacitaciones, :cargos_organismos_ct, :categorizacion_programa_incentivos, :cargos_id_otro, :cargos_gestion_institucional, :otros_cargos)", params) == 1;
 
 	}
 }
