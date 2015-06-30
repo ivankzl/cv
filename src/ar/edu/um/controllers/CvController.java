@@ -66,4 +66,9 @@ public class CvController {
 		return "produccion";
 	}
 	
+	@RequestMapping(value="/antecedentes")
+	public String antecedentes(Model model){
+		
+		return "antecedentes";
+	}
 }

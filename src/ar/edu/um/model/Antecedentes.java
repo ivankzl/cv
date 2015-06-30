@@ -27,7 +27,7 @@ public class Antecedentes{
 	public String operacion_mantenimiento;
 	public String produccion;
 	public String normalizacion;
-	public String ejercicio_profesional_ambito_no_academico;
+	public String ejercicio_profesion_ambito_no_academico;
 	public String otra_actividad_cyt;
 	
 	
@@ -172,12 +172,12 @@ public class Antecedentes{
 	public void setNormalizacion(String normalizacion) {
 		this.normalizacion = normalizacion;
 	}
-	public String getEjercicio_profesional_ambito_no_academico() {
-		return ejercicio_profesional_ambito_no_academico;
+	public String getEjercicio_profesion_ambito_no_academico() {
+		return ejercicio_profesion_ambito_no_academico;
 	}
-	public void setEjercicio_profesional_ambito_no_academico(
-			String ejercicio_profesional_ambito_no_academico) {
-		this.ejercicio_profesional_ambito_no_academico = ejercicio_profesional_ambito_no_academico;
+	public void setEjercicio_profesion_ambito_no_academico(
+			String ejercicio_profesion_ambito_no_academico) {
+		this.ejercicio_profesion_ambito_no_academico = ejercicio_profesion_ambito_no_academico;
 	}
 	public String getOtra_actividad_cyt() {
 		return otra_actividad_cyt;
@@ -185,6 +185,36 @@ public class Antecedentes{
 	public void setOtra_actividad_cyt(String otra_actividad_cyt) {
 		this.otra_actividad_cyt = otra_actividad_cyt;
 	}
+	@Override
+	public String toString() {
+		return "Antecedentes [dni=" + dni + ", becario=" + becario
+				+ ", tesista_doctoral=" + tesista_doctoral
+				+ ", tesista_maestria=" + tesista_maestria + ", tesista_grado="
+				+ tesista_grado + ", investigadores=" + investigadores
+				+ ", pasantes_id_y_facademica=" + pasantes_id_y_facademica
+				+ ", personal_apoyo_id=" + personal_apoyo_id
+				+ ", financiamiento_cientifico_tecnologico="
+				+ financiamiento_cientifico_tecnologico
+				+ ", actividades_divulgacion=" + actividades_divulgacion
+				+ ", extension_rural_industrial=" + extension_rural_industrial
+				+ ", prestacion_servicios_sociales="
+				+ prestacion_servicios_sociales
+				+ ", produccion_divulgacion_artistica="
+				+ produccion_divulgacion_artistica + ", otro_tipo_actividad="
+				+ otro_tipo_actividad + ", evaluacion_personal="
+				+ evaluacion_personal + ", evaluacion_programas="
+				+ evaluacion_programas + ", evaluacion_institucional="
+				+ evaluacion_institucional + ", otro_tipo_evaluacion="
+				+ otro_tipo_evaluacion + ", becas=" + becas
+				+ ", estancias_pasantias=" + estancias_pasantias
+				+ ", operacion_mantenimiento=" + operacion_mantenimiento
+				+ ", produccion=" + produccion + ", normalizacion="
+				+ normalizacion
+				+ ", ejercicio_profesional_ambito_no_academico="
+				+ ejercicio_profesion_ambito_no_academico
+				+ ", otra_actividad_cyt=" + otra_actividad_cyt + "]";
+	}
+	
 	
 	
 }
