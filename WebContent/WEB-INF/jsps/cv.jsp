@@ -37,19 +37,7 @@
 					<a class="btn btn-primary btn-lg" href="http://localhost:8080/spring/produccion" role="button">Producción</a>
 					<a class="btn btn-primary btn-lg" href="#" role="button">Otros Antecedentes</a>
 				</p>
-				<nav class="navbar navbar-default">
-				  <div class="container-fluid">
-				    <!-- Brand and toggle get grouped for better mobile display -->
-						<ul class="nav navbar-nav">
-					        <li><a href="http://localhost:8080/spring/datos">Datos Personales</a></li>
-					        <li><a href="http://localhost:8080/spring/formacion">Formación</a></li>
-					        <li><a href="http://localhost:8080/spring/cargos">Cargos</a></li>
-					        <li><a href="http://localhost:8080/spring/antecedentes">Antecedentes</a></li>
-					        <li><a href="http://localhost:8080/spring/produccion">Producción</a></li>
-					        <li><a href="http://localhost:8080/spring/produccion">Otros Antecedentes</a></li>
-					    </ul>
-				   </div>
-				</nav>
+	
 			</div><!--container-->
 		</div>
 	</div>

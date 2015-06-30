@@ -19,14 +19,14 @@
 			<attribute name="owner.project.facets" value="jst.web"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/jorgelina/Descargas/com.mysql.jdbc_5.1.5.jar.zip"/>
-	<classpathentry kind="lib" path="/home/jorgelina/Descargas/java-mail-1.4.4.jar.zip"/>
-	<classpathentry kind="lib" path="/home/jorgelina/Descargas/spring-boot-maven-plugin-1.2.3.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/home/jorgelina/Descargas/spring-security-taglibs-3.2.3.RELEASE.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="/home/laura/Downloads/com.mysql.jdbc_5.1.5.jar"/>
+	<classpathentry kind="lib" path="/home/laura/Downloads/java-mail-1.4.4.jar"/>
+	<classpathentry kind="lib" path="/home/laura/Downloads/spring-boot-maven-plugin-1.2.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/laura/Downloads/spring-security-taglibs-3.2.3.RELEASE.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
