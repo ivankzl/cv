@@ -25,7 +25,7 @@
 			</div>
 			<div class="panel-body">
 				<p>
-					<a href="${pageContext.request.contextPath}/"> Volver a cursos</a>
+	
 				</p>
 			</div>
 			<!--panel body-->
