@@ -21,7 +21,6 @@
 
 						<div id="login-box">
 
-							<h2>Login with Username and Password</h2>
 
 							<c:if test="${not empty error}">
 								<div class="error">${error}</div>
@@ -45,8 +44,13 @@
 								</div>
 								<input name="submit" type="submit" value="submit" />
 
-								 <input type="hidden" name="${_csrf.parameterName}"
-			value="${_csrf.token}" />
+								<div class="form-group">
+									¿No tenés una cuenta? <a href="<c:url value="/registro" />">Registrate
+										aquí.</a>
+								</div>
+
+								<input type="hidden" name="${_csrf.parameterName}"
+									value="${_csrf.token}" />
 
 							</form>
 						</div>
