@@ -5,6 +5,8 @@ import java.util.List;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -12,7 +14,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import ar.edu.um.model.Cv;
+import ar.edu.um.model.DatosPersonales;
 import ar.edu.um.service.CvService;
+import ar.edu.um.service.DatosPersonalesService;
 
 
 @Controller
@@ -27,6 +31,15 @@ public class CvController {
 	}
 	
 	/* muestra los cursos que hay en la BD */ 
+	
+	private DatosPersonalesService datosPersonalesService;
+	
+	@Autowired
+	public void setDatosPersonalesService(DatosPersonalesService datosPersonalesService) {
+		this.datosPersonalesService = datosPersonalesService;
+	}
+	
+	
 	@RequestMapping(value="/registro")
 	public String showTest (Model model) {
 
@@ -43,9 +56,55 @@ public class CvController {
 	@RequestMapping(value="/datos")
 	public String datos(Model model){
 		
+		 Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+	     String username = auth.getName(); /*trae el usuario logueado en el sistema */
+	     System.out.println("USER: " + username);
+	      
+		DatosPersonales dp = datosPersonalesService.getData(Integer.parseInt(username));
+		
+		model.addAttribute("dni", dp.getDni());
+		model.addAttribute("nombre", dp.getNombre());
+		model.addAttribute("apellido", dp.getApellido());
+		model.addAttribute("sexo", dp.getSexo());
+		model.addAttribute("estado_civil", dp.getEstado_civil());
+		model.addAttribute("email", dp.getEmail());
+		model.addAttribute("fecha_nac", dp.getFecha_nac());
+		model.addAttribute("nacionalidad", dp.getNacionalidad());
+		model.addAttribute("CUIL_CUIT", dp.getCUIL_CUIT());
+		model.addAttribute("domicilio", dp.getDomicilio());
+		model.addAttribute("departamento", dp.getDepartamento());
+		model.addAttribute("provincia", dp.getProvincia());
+		model.addAttribute("pais", dp.getPais());
+		
 		return "datos";
 	}
 	
+	
+	@RequestMapping(value="/datosEditar")
+	public String datosEditar(Model model){
+		
+		 Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+	     String username = auth.getName(); /*trae el usuario logueado en el sistema */
+	     System.out.println("USER: " + username);
+	      
+		DatosPersonales dp = datosPersonalesService.getData(Integer.parseInt(username));
+		
+		model.addAttribute("dni", dp.getDni());
+		model.addAttribute("nombre", dp.getNombre());
+		model.addAttribute("apellido", dp.getApellido());
+		model.addAttribute("sexo", dp.getSexo());
+		model.addAttribute("estado_civil", dp.getEstado_civil());
+		model.addAttribute("email", dp.getEmail());
+		model.addAttribute("fecha_nac", dp.getFecha_nac());
+		model.addAttribute("nacionalidad", dp.getNacionalidad());
+		model.addAttribute("CUIL_CUIT", dp.getCUIL_CUIT());
+		model.addAttribute("domicilio", dp.getDomicilio());
+		model.addAttribute("departamento", dp.getDepartamento());
+		model.addAttribute("provincia", dp.getProvincia());
+		model.addAttribute("pais", dp.getPais());
+		
+		return "datosEditar";
+	}
 
 	@RequestMapping(value="/formacion")
 	public String formacion(Model model){

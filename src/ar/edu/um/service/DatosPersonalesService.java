@@ -19,4 +19,8 @@ public class DatosPersonalesService {
 	public void create(DatosPersonales datosPersonales){
 		datosPersonalesDao.create(datosPersonales);
 	}
+	
+	public DatosPersonales getData(int dni){
+		return datosPersonalesDao.getData(dni);
+	}
 }

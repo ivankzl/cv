@@ -34,7 +34,7 @@ private NamedParameterJdbcTemplate jdbc;
 
 	      
 		try {
-			return jdbc.queryForObject("select * from datos_personales where DNI = :DNI ", params, new RowMapper<DatosPersonales>() {
+			return jdbc.queryForObject("select * from datos_personales where dni = :dni ", params, new RowMapper<DatosPersonales>() {
 	
 						public DatosPersonales mapRow(ResultSet rs, int rowNum) throws SQLException {
 	
