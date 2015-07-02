@@ -27,7 +27,9 @@
 		<img src="resources/imagenes/marca.png">
 		<div class="well">
 			<div class="container">
-
+				<div class="logout">
+					<a href="http://localhost:8080/spring/login">Salir</a>
+				</div>	
 				<h1>Currículum Vitae</h1>
 				<p>Seleccione una categoría para ver/editar sus datos:</p>
 
@@ -50,13 +52,6 @@
 					method="post"
 					action="${pageContext.request.contextPath}/crearproduccion"
 					modelAttribute="produccion">
-
-					<!-- DNI // sacar y traer del login -->
-					<div class="form-group">
-						<label for="inputName">DNI</label> <input type="text" id="dni"
-							class="form-control" path="dni" name="dni" placeholder="DNI">
-						<form:errors cssClass="error" path="dni"></form:errors>
-					</div>
 
  					<!-- OTRAS ANTECEDENTES -->
 
@@ -122,7 +117,7 @@
                    <!-- BOTON SIGUIENTE -->
                    <div class="row">
                      <div class="col-md-4"></div>
-                     <div class="col-md-4"><button type="submit" class="btn-siguiente">Siguiente</button></div>
+                     <div class="col-md-4"><button type="submit" class="btn-siguiente">Enviar</button></div>
                      <div class="col-md-4"></div>
                    </div>
         			

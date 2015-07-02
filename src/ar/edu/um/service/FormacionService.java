@@ -19,4 +19,8 @@ public class FormacionService {
 	public void create(Formacion formacion){
 		formacionDao.create(formacion);
 	}
+	
+	public Formacion getData(int dni){
+		return formacionDao.getData(dni);
+	}
 }

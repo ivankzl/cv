@@ -27,7 +27,9 @@
 		<img src="resources/imagenes/marca.png">
 		<div class="well">
 			<div class="container">
-
+				<div class="logout">
+					<a href="http://localhost:8080/spring/login">Salir</a>
+				</div>	
 				<h1>Currículum Vitae</h1>
 				<p>Seleccione una categoría para ver/editar sus datos:</p>
 				

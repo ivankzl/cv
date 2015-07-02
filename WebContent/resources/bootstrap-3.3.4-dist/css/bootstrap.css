@@ -1121,6 +1121,11 @@ td > a {
   color: #223DA9;
   text-decoration: none;
 }
+.logout > a{
+  padding-left: 550px;
+  font-size: 20px;
+  text-decoration: underline;
+}
 
 a {
   color: rgb(76, 142, 250);

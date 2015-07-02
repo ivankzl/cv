@@ -32,11 +32,6 @@
 				<form action="${logoutUrl}" method="post" id="logoutForm">
 					<input type="hidden" name="${_csrf.parameterName}"value="${_csrf.token}" />
 				</form>
-				
-				<div class="logout">
-					<a href="http://localhost:8080/spring/login">Salir</a>
-				</div>	
-				
 				<h1>Currículum Vitae</h1>
 				<p>Seleccione una categoría para ver/editar sus datos:</p>
 				

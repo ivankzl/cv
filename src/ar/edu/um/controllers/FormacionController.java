@@ -39,7 +39,8 @@ public class FormacionController {
 			}
 			
 			return "/";
-		}
+			}
+		
 		formacionService.create(formacion);
 		
 		model.addAttribute("dni", formacion.getDni());

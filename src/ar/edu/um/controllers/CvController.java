@@ -1,5 +1,6 @@
 package ar.edu.um.controllers;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import javax.validation.Valid;
@@ -15,8 +16,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import ar.edu.um.model.Cv;
 import ar.edu.um.model.DatosPersonales;
+import ar.edu.um.model.Formacion;
 import ar.edu.um.service.CvService;
 import ar.edu.um.service.DatosPersonalesService;
+import ar.edu.um.service.FormacionService;
 
 
 @Controller
@@ -33,6 +36,7 @@ public class CvController {
 	/* muestra los cursos que hay en la BD */ 
 	
 	private DatosPersonalesService datosPersonalesService;
+	private FormacionService formacionService;
 	
 	@Autowired
 	public void setDatosPersonalesService(DatosPersonalesService datosPersonalesService) {
@@ -52,6 +56,8 @@ public class CvController {
 		
 		return "cv";
 	}
+	
+	/*** DATOS ***/
 	
 	@RequestMapping(value="/datos")
 	public String datos(Model model){
@@ -79,6 +85,7 @@ public class CvController {
 		return "datos";
 	}
 	
+	/*** DATOS EDITAR ***/
 	
 	@RequestMapping(value="/datosEditar")
 	public String datosEditar(Model model){
@@ -106,11 +113,54 @@ public class CvController {
 		return "datosEditar";
 	}
 
+	/*** FORMACION ***/
+	
 	@RequestMapping(value="/formacion")
 	public String formacion(Model model){
+	
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+	    String username = auth.getName(); /*trae el usuario logueado en el sistema */
+	    System.out.println("USER: " + username);
+	     
+		Formacion dp = formacionService.getData(Integer.parseInt(username));
+				
+		model.addAttribute("dni", dp.getDni());
+		model.addAttribute("nivel_universitario_posgrado", dp.getNivel_universitario_posgrado());
+		model.addAttribute("nivel_universitario_posgrado_especializacion", dp.getNivel_universitario_posgrado_especializacion());
+		model.addAttribute("nivel_universitario_grado", dp.getNivel_universitario_grado());
+		model.addAttribute("nivel_terciario_no_universitario", dp.getNivel_terciario_no_universitario());
+		model.addAttribute("especialidad_certificada", dp.getEspecialidad_certificada());
+		model.addAttribute("posdoctorado", dp.getPosdoctorado());
+		model.addAttribute("cursos_posgrado_y_capacitaciones", dp.getCursos_posgrado_y_capacitaciones());
+		model.addAttribute("idiomas", dp.getIdiomas());
 		
 		return "formacion";
 	}
+	
+	/*** FORMACION EDITAR ***/
+	
+	@RequestMapping(value="/formacionEditar")
+	public String formacionEditar(Model model){
+	
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+	    String username = auth.getName(); /*trae el usuario logueado en el sistema */
+	    System.out.println("USER: " + username);
+	     
+		Formacion dp = formacionService.getData(Integer.parseInt(username));
+				
+		model.addAttribute("dni", dp.getDni());
+		model.addAttribute("nivel_universitario_posgrado", dp.getNivel_universitario_posgrado());
+		model.addAttribute("nivel_universitario_posgrado_especializacion", dp.getNivel_universitario_posgrado_especializacion());
+		model.addAttribute("nivel_universitario_grado", dp.getNivel_universitario_grado());
+		model.addAttribute("nivel_terciario_no_universitario", dp.getNivel_terciario_no_universitario());
+		model.addAttribute("especialidad_certificada", dp.getEspecialidad_certificada());
+		model.addAttribute("posdoctorado", dp.getPosdoctorado());
+		model.addAttribute("cursos_posgrado_y_capacitaciones", dp.getCursos_posgrado_y_capacitaciones());
+		model.addAttribute("idiomas", dp.getIdiomas());
+		
+		return "formacionEditar";
+	}
+	
 	
 	@RequestMapping(value="/cargos")
 	public String cargos(Model model){
