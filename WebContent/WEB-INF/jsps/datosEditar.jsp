@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
@@ -36,16 +35,22 @@
 
 				<h1>Currículum Vitae</h1>
 				<p>Seleccione una categoría para ver/editar sus datos:</p>
-				<p>
-					<a class="btn btn-primary btn-lg" href="/datos" role="button">Datos
-						Personales</a> <a class="btn btn-default btn-lg"
-						href="http://localhost:8080/spring/cv" role="button">Formación</a>
-					<a class="btn btn-default btn-lg" href="/cargos" role="button">Cargos</a>
-					<a class="btn btn-default btn-lg" href="/antecedentes" role="button">Antecedentes</a>
-					<a class="btn btn-default btn-lg" href="/produccion" role="button">Producción</a>
-					<a class="btn btn-default btn-lg" href="#" role="button">Otros
-						Antecedentes</a>
-				</p>
+
+
+				<!-- NAVBAR -->
+				<nav class="navbar navbar-default">
+				    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				      <ul class="nav navbar-nav">
+				        <li><a href="http://localhost:8080/spring/datos" role="button">Datos Personales</a></li>
+				        <li><a href="http://localhost:8080/spring/formacion" role="button">Formación</a></li>
+				        <li><a href="http://localhost:8080/spring/cargos" role="button">Cargos</a></li>
+				        <li><a href="http://localhost:8080/spring/antecedentes" role="button">Antecedentes</a></li>
+				        <li><a href="http://localhost:8080/spring/produccion" role="button">Producción</a></li>
+				        <li><a href="http://localhost:8080/spring/otrosantecedentes" role="button">Otros Antecedentes</a></li>
+				      </ul>
+				    </div>
+				</nav>
+				<!--  -->
 
 				<form:form id="registration-form" class="form-horizontal"
 					method="post"
