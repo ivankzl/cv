@@ -53,11 +53,12 @@
 					action="${pageContext.request.contextPath}/crearproduccion"
 					modelAttribute="produccion">
 
-					<!-- DNI // sacar y traer del login -->
+					<!-- DNI -->
 					<div class="form-group">
-						<label for="inputName">DNI</label> <input type="text" id="dni"
-							class="form-control" path="dni" name="dni" placeholder="DNI">
-						<form:errors cssClass="error" path="dni"></form:errors>
+						<label for="dni">DNI
+						<input type="text"
+							id="dni" class="form-control" path="dni"
+							name="dni" placeholder="DNI" value="${dni}"></label>
 					</div>
 
         			<!-- PRODUCCION -->

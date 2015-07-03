@@ -52,7 +52,14 @@
 					method="post"
 					action="${pageContext.request.contextPath}/crearantecedentes"
 					modelAttribute="antedecentes">
-
+					
+					<div class="form-group">
+						<label for="dni">DNI
+						<input type="text"
+							id="dni" class="form-control" path="dni"
+							name="dni" placeholder="DNI" value="${dni}"></label>
+					</div>
+					
      				<div class="form-group">
                         <h2>ANTECEDENTES</h2>
                         <h3>Formación de recursos humanos en CyT</h3>

@@ -34,13 +34,13 @@ public class FormacionDAO {
 		return jdbc.update("insert into formacion (dni, nivel_universitario_posgrado, nivel_universitario_posgrado_especializacion, nivel_universitario_grado, nivel_terciario_no_universitario, especialidad_certificada, posdoctorado, cursos_posgrado_y_capacitaciones, idiomas) values (:dni, :nivel_universitario_posgrado, :nivel_universitario_posgrado_especializacion, :nivel_universitario_grado, :nivel_terciario_no_universitario, :especialidad_certificada, :posdoctorado, :cursos_posgrado_y_capacitaciones, :idiomas)", params) == 1;
 
 	}
-
+	/*
 
 	public Formacion getData(int dni) {
 
 		MapSqlParameterSource params = new MapSqlParameterSource();
 		params.addValue("dni", dni);
-
+		
 	      
 		try {
 			return jdbc.queryForObject("select * from formacion where dni = :dni ", params, new RowMapper<Formacion>() {
@@ -67,8 +67,10 @@ public class FormacionDAO {
 					});
 		}
 		catch(EmptyResultDataAccessException erdae) {
+			System.out.println("en formacionDAO devuelve null");
 			return null;
 		}
 		
 	}
+	*/
 }

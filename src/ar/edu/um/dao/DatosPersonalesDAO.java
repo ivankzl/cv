@@ -31,6 +31,7 @@ private NamedParameterJdbcTemplate jdbc;
 
 		MapSqlParameterSource params = new MapSqlParameterSource();
 		params.addValue("dni", dni);
+		
 
 	      
 		try {
@@ -41,7 +42,7 @@ private NamedParameterJdbcTemplate jdbc;
 						
 							DatosPersonales dp = new DatosPersonales();
 							
-							dp.setDni(rs.getBigDecimal("DNI"));
+							dp.setDni(rs.getBigDecimal("dni"));
 							dp.setNombre(rs.getString("nombre"));
 							dp.setApellido(rs.getString("apellido"));
 							dp.setSexo(rs.getString("sexo"));

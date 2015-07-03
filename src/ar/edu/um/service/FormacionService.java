@@ -19,8 +19,10 @@ public class FormacionService {
 	public void create(Formacion formacion){
 		formacionDao.create(formacion);
 	}
-	
+	/*
 	public Formacion getData(int dni){
+		System.out.println("formacion get data");
 		return formacionDao.getData(dni);
 	}
+	*/
 }

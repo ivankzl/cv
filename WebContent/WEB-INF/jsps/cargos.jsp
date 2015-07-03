@@ -55,9 +55,14 @@
 					method="post"
 					action="${pageContext.request.contextPath}/crearcargos"
 					modelAttribute="formacion">
-
+					<div class="form-group">
+						<label for="dni">DNI
+						<input type="text"
+							id="dni" class="form-control" path="dni"
+							name="dni" placeholder="DNI" value="${dni}"></label>
+					</div>
 					<!-- DOCENCIA -->
-
+					
 					<div class="form-group">
 						<h2>CARGOS</h2>
 						<h3>Docencia</h3>

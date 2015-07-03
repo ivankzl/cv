@@ -1,23 +1,16 @@
 package ar.edu.um.controllers;
 
 import java.math.BigDecimal;
-import java.util.List;
-
-import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
-import ar.edu.um.model.Cv;
 import ar.edu.um.model.DatosPersonales;
-import ar.edu.um.model.Formacion;
-import ar.edu.um.service.CvService;
+import ar.edu.um.model.User;
 import ar.edu.um.service.DatosPersonalesService;
 import ar.edu.um.service.FormacionService;
 
@@ -67,6 +60,7 @@ public class CvController {
 	     System.out.println("USER: " + username);
 	      
 		DatosPersonales dp = datosPersonalesService.getData(Integer.parseInt(username));
+		System.out.println("dp = " + dp);
 		
 		model.addAttribute("dni", dp.getDni());
 		model.addAttribute("nombre", dp.getNombre());
@@ -121,9 +115,16 @@ public class CvController {
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 	    String username = auth.getName(); /*trae el usuario logueado en el sistema */
 	    System.out.println("USER: " + username);
-	     
+	    BigDecimal dni = new BigDecimal (username);
+	    model.addAttribute("dni", dni);
+	
+	    /*
 		Formacion dp = formacionService.getData(Integer.parseInt(username));
-				
+		System.out.println("pasamos formacion dp en cv controller");
+		if (dp == null){
+			System.out.println("formacion es null");
+			return "formacion";
+		}
 		model.addAttribute("dni", dp.getDni());
 		model.addAttribute("nivel_universitario_posgrado", dp.getNivel_universitario_posgrado());
 		model.addAttribute("nivel_universitario_posgrado_especializacion", dp.getNivel_universitario_posgrado_especializacion());
@@ -133,18 +134,19 @@ public class CvController {
 		model.addAttribute("posdoctorado", dp.getPosdoctorado());
 		model.addAttribute("cursos_posgrado_y_capacitaciones", dp.getCursos_posgrado_y_capacitaciones());
 		model.addAttribute("idiomas", dp.getIdiomas());
-		
+		*/
 		return "formacion";
 	}
 	
 	/*** FORMACION EDITAR ***/
-	
+	/*
 	@RequestMapping(value="/formacionEditar")
 	public String formacionEditar(Model model){
 	
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 	    String username = auth.getName(); /*trae el usuario logueado en el sistema */
-	    System.out.println("USER: " + username);
+	   /*
+		System.out.println("USER: " + username);
 	     
 		Formacion dp = formacionService.getData(Integer.parseInt(username));
 				
@@ -161,9 +163,16 @@ public class CvController {
 		return "formacionEditar";
 	}
 	
-	
+	*/
 	@RequestMapping(value="/cargos")
 	public String cargos(Model model){
+
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+	    String username = auth.getName(); /*trae el usuario logueado en el sistema */
+	    System.out.println("USER: " + username);
+	    BigDecimal dni = new BigDecimal (username);
+	    model.addAttribute("dni", dni);
+		
 		
 		return "cargos";
 	}
@@ -171,13 +180,21 @@ public class CvController {
 
 	@RequestMapping(value="/produccion")
 	public String produccion(Model model){
-		
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+	    String username = auth.getName(); /*trae el usuario logueado en el sistema */
+	    System.out.println("USER: " + username);
+	    BigDecimal dni = new BigDecimal (username);
+	    model.addAttribute("dni", dni);
 		return "produccion";
 	}
 	
 	@RequestMapping(value="/antecedentes")
 	public String antecedentes(Model model){
-		
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+	    String username = auth.getName(); /*trae el usuario logueado en el sistema */
+	    System.out.println("USER: " + username);
+	    BigDecimal dni = new BigDecimal (username);
+	    model.addAttribute("dni", dni);
 		return "antecedentes";
 	}
 }

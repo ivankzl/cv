@@ -52,11 +52,11 @@ public class MainController {
  
 	  ModelAndView model = new ModelAndView();
 	  if (error != null) {
-		model.addObject("error", "Invalid username and password!");
+		model.addObject("error", "Usuario o contraseña inválidos");
 	  }
  
 	  if (logout != null) {
-		model.addObject("msg", "You've been logged out successfully.");
+		model.addObject("msg", "Usted ha cerrado sesión correctamente");
 	  }
 	  model.setViewName("login");
  
@@ -69,7 +69,7 @@ public class MainController {
  
 	  ModelAndView model = new ModelAndView();
 	  if (error != null) {
-		model.addObject("error", "Invalid username and password!");
+		model.addObject("error", "Usuario o contraseña inválidos");
 	  }
  
 	  model.setViewName("registro");

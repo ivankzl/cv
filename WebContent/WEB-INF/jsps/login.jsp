@@ -39,7 +39,7 @@
 										type="text" name="username" placeholder="N° Documento">
 								</div>
 								<div class="form-group">
-									<label for="inputNumDoc">Contraseña</label> <input
+									<label for="inputPass">Contraseña</label> <input
 										type="password" name="password">
 								</div>
 								<input name="submit" type="submit" value="submit" />

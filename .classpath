@@ -24,7 +24,9 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/ivan/Descargas/com.mysql.jdbc_5.1.5.jar"/>
-	<classpathentry kind="lib" path="/home/ivan/Descargas/spring-boot-maven-plugin-1.2.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/laura/Downloads/spring-boot-maven-plugin-1.2.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/laura/Downloads/com.mysql.jdbc_5.1.5.jar"/>
+	<classpathentry kind="lib" path="/home/laura/Downloads/spring-security-core-3.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/laura/Downloads/spring-security-web-3.1.4.RELEASE.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
