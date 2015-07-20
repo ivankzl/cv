@@ -2,6 +2,8 @@ package ar.edu.um.controllers;
 
 import java.math.BigDecimal;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -15,13 +17,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import ar.edu.um.model.User;
+import ar.edu.um.model.UserRole;
 import ar.edu.um.service.UsersService;
  
 @Controller
 public class MainController {
  
 	private UsersService usersService;
-	
+		
 	@Autowired
 	public void setUsersService(UsersService usersService) {
 		this.usersService = usersService;
@@ -34,6 +37,12 @@ public class MainController {
 	  return "login";
  
 	}
+	
+	/*@RequestMapping(value = "logout", method = RequestMethod.GET)
+	public String logout() {
+	    SecurityContextHolder.clearContext();
+	    return "redirect:/j_spring_security_logout";
+	} */
  
 	@RequestMapping(value = "/admin**", method = RequestMethod.GET)
 	public ModelAndView adminPage() {
@@ -86,12 +95,15 @@ public class MainController {
 		User user = new User();
 		user.setDNI(DNI);
 		user.setPassword(password);
-	   
-		
-		System.out.println(user);
-		
+	   	System.out.println(user);
 		usersService.create(user);
 		
+		UserRole userRole = new UserRole();
+		userRole.setDNI(DNI);
+		userRole.setRole("ROLE_USER");	
+		System.out.println(userRole);
+		
+		usersService.createRole(userRole);
 		
 		return "registrado";
 	}

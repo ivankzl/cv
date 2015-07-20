@@ -55,8 +55,16 @@ public class CvController {
 	@RequestMapping(value="/datos")
 	public String datos(Model model){
 		
-		 Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-	     String username = auth.getName(); /*trae el usuario logueado en el sistema */
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+	    String username = auth.getName(); /*trae el usuario logueado en el sistema */
+	    System.out.println("USER: " + username);
+	    BigDecimal dni = new BigDecimal (username);
+	    model.addAttribute("dni", dni);
+		
+		
+		
+		/* Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+	     String username = auth.getName();
 	     System.out.println("USER: " + username);
 	      
 		DatosPersonales dp = datosPersonalesService.getData(Integer.parseInt(username));
@@ -74,7 +82,7 @@ public class CvController {
 		model.addAttribute("domicilio", dp.getDomicilio());
 		model.addAttribute("departamento", dp.getDepartamento());
 		model.addAttribute("provincia", dp.getProvincia());
-		model.addAttribute("pais", dp.getPais());
+		model.addAttribute("pais", dp.getPais());*/
 		
 		return "datos";
 	}

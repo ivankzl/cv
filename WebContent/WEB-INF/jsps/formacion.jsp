@@ -49,7 +49,7 @@
 				        <li><a href="http://localhost:8080/spring/cargos" role="button">Cargos</a></li>
 				        <li><a href="http://localhost:8080/spring/antecedentes" role="button">Antecedentes</a></li>
 				        <li><a href="http://localhost:8080/spring/produccion" role="button">Producción</a></li>
-				        <li><a href="http://localhost:8080/spring/otrosantecedentes" role="button">Otros Antecedentes</a></li>
+				         <li>Otros Antecedentes</li>
 				      </ul>
 				    </div>
 				</nav>

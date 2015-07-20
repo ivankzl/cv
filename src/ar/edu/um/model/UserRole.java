@@ -1,10 +1,14 @@
 package ar.edu.um.model;
+import java.math.BigDecimal;
 
 public class UserRole {
 
 	private Integer userRoleId;
-	private User user;
+	private BigDecimal DNI; /* agrego esto por ahora (koke)*/
 	private String role;
+	
+	private User user;
+	
 
 	public Integer getUserRoleId() {
 		return userRoleId;
@@ -14,6 +18,14 @@ public class UserRole {
 		this.userRoleId = userRoleId;
 	}
 
+	public BigDecimal getDNI(){
+		return DNI;
+	}
+	
+	public void setDNI(BigDecimal DNI){
+		this.DNI = DNI;
+	}
+	
 	public User getUser() {
 		return user;
 	}

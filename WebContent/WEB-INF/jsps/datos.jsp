@@ -32,7 +32,15 @@
 		<img src="resources/imagenes/marca.png">
 		<div class="well">
 			<div class="container">
-
+				
+				<c:url value="/j_spring_security_logout" var="logoutUrl" />
+				
+				<form action="${logoutUrl}" method="post" id="logoutForm">
+					<input type="hidden" name="${_csrf.parameterName}"value="${_csrf.token}" />
+				</form>
+				<div class="logout">
+					<a href="http://localhost:8080/spring/login">Salir</a>
+				</div>	
 				<h1>Currículum Vitae</h1>
 				<p>Seleccione una categoría para ver/editar sus datos:</p>
 
@@ -45,7 +53,7 @@
 				        <li><a href="http://localhost:8080/spring/cargos" role="button">Cargos</a></li>
 				        <li><a href="http://localhost:8080/spring/antecedentes" role="button">Antecedentes</a></li>
 				        <li><a href="http://localhost:8080/spring/produccion" role="button">Producción</a></li>
-				        <li><a href="http://localhost:8080/spring/otrosantecedentes" role="button">Otros Antecedentes</a></li>
+				         <li>Otros Antecedentes</li>
 				      </ul>
 				    </div>
 				</nav>
