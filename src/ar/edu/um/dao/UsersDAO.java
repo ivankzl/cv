@@ -23,6 +23,7 @@ private NamedParameterJdbcTemplate jdbc;
 	public boolean create(User user) {
 
 		BeanPropertySqlParameterSource params = new BeanPropertySqlParameterSource(user);
+		System.out.println();
 		return jdbc.update("insert into users (DNI, password, enabled) values (:DNI, :password, 1)", params) == 1;
 
 	}

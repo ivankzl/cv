@@ -48,11 +48,11 @@
 				<nav class="navbar navbar-default">
 				    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				      <ul class="nav navbar-nav">
-				        <li><a href="http://localhost:8080/spring/datos" role="button">Datos Personales</a></li>
-				        <li><a href="http://localhost:8080/spring/formacion" role="button">Formación</a></li>
-				        <li><a href="http://localhost:8080/spring/cargos" role="button">Cargos</a></li>
-				        <li><a href="http://localhost:8080/spring/antecedentes" role="button">Antecedentes</a></li>
-				        <li><a href="http://localhost:8080/spring/produccion" role="button">Producción</a></li>
+				        <li><a href="http://www.um.edu.ar/cv/datos" role="button">Datos Personales</a></li>
+				        <li><a href="http://www.um.edu.ar/cv/formacion" role="button">Formación</a></li>
+				        <li><a href="http://www.um.edu.ar/cv/cargos" role="button">Cargos</a></li>
+				        <li><a href="http://www.um.edu.ar/cv/antecedentes" role="button">Antecedentes</a></li>
+				        <li><a href="http://www.um.edu.ar/cv/produccion" role="button">Producción</a></li>
 				         <li>Otros Antecedentes</li>
 				      </ul>
 				    </div>
@@ -60,7 +60,7 @@
 				<!--  -->
 					<form:form id="registration-form" class="form-horizontal"
 					method="post"
-					action="${pageContext.request.contextPath}/crearproduccion"
+					action="${pageContext.request.contextPath}/creardatos"
 					modelAttribute="produccion">
 
 					<!-- DNI -->
