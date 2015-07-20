@@ -42,7 +42,7 @@
 				        <li><a href="http://www.um.edu.ar/cv/cargos" role="button">Cargos</a></li>
 				        <li><a href="http://www.um.edu.ar/cv/antecedentes" role="button">Antecedentes</a></li>
 				        <li><a href="http://www.um.edu.ar/cv/produccion" role="button">Producción</a></li>
-				         <li>Otros Antecedentes</li>
+				        <li><a href="http://www.um.edu.ar/cv/otrosantecedentes" role="button">Otros Antecedentes</li>
 				      </ul>
 				    </div>
 				</nav>
@@ -61,29 +61,36 @@
                    </div>                                
                    <!-- Participación u organización de eventos CyT -->
        				    <div class="form-group">
-       				        <label for="inputName">Estancias y pasantías</label>
-       				        <input type="text" class="form-control"  placeholder="Participación u organización de eventos CyT">
+       				        <label for="inputEstanciasyPasantias">Estancias y pasantías</label>
+       				        <input type="text" class="form-control"  placeholder="Estancias y pasantías" id="estancias_pasantias" 
+       				        path="estancias_pasantias" name="estancias_pasantias">
        				    </div> 
 
                    <!-- Membresías, redes y/o programas de cooperación -->
 
                    <div class="form-group">
                      <h3>Membresías, redes y/o programas de cooperación</h3>
-                   </div>             				
+                   </div>   
+                             				
                    <!-- Membresías n asocianiones C-T y/o profesionales -->                
                    <div class="form-group">
-                       <label for="inputApellido">Membresías n asocianiones C-T y/o profesionales</label>
-                       <input type="text" class="form-control"  placeholder="Membresías n asocianiones C-T y/o profesionales">
+                       <label for="inputMembresíasEnAsociacionesCT">Membresías en asocianiones C-T y/o profesionales</label>
+                       <input type="text" class="form-control"  placeholder="Membresías en asocianiones C-T y/o profesionales"
+                       id="membresias_asociaciones_ct" path="membresias_asociaciones_ct" name="membresias_asociaciones_ct">
                    </div>
+                   
                    <!-- Participación en redes temáticas o institucionales --> 
                    <div class="form-group">
-                       <label for="Sexo">Participación en redes temáticas o institucionales</label>
-                       <input type="text" class="form-control"  placeholder="Participación en redes temáticas o institucionales">
+                       <label for="inputParticipacionEnRedesTematicas">Participación en redes temáticas o institucionales</label>
+                       <input type="text" class="form-control"  placeholder="Participación en redes temáticas o institucionales"
+                       id="participacion_redes_tematicas" path="participacion_redes_tematicas" name="participacion_redes_tematicas">
                    </div>
+                   
                    <!-- Coordinación de proyectos de cooperación académica o  C-T --> 
                    <div class="form-group">
-                       <label for="Estado">Coordinación de proyectos de cooperación académica o  C-T</label>
-                       <input type="text" class="form-control"  placeholder="Coordinación de proyectos de cooperación académica o  C-T">
+                       <label for="inputCoordinacionDeProyectosCooperacion">Coordinación de proyectos de cooperación académica o  C-T</label>
+                       <input type="text" class="form-control"  placeholder="Coordinación de proyectos de cooperación académica o  C-T"
+                       id="coordinacion_proyectos_cooperacion" path="coordinacion_proyectos_cooperacion" name="coordinacion_proyectos_cooperacion">
                    </div>
 
                    <!-- PREMIOS Y/O DISTINCIONES -->
@@ -93,8 +100,9 @@
                    </div>   
                    <!-- Premios y/o distinciones --> 
                    <div class="form-group">
-                       <label for="Estado">Premios y/o distinciones</label>
-                       <input type="text" class="form-control"  placeholder="Premios y/o distinciones">
+                       <label for="inputPremiosDistinciones">Premios y/o distinciones</label>
+                       <input type="text" class="form-control"  placeholder="Premios y/o distinciones"
+                       id="premios_distinciones" path="premios_distinciones" name="premios_distinciones">
                    </div>
 
                      <!-- OTROS ANTECEDENTES --> 
@@ -105,13 +113,16 @@
                    
                    <!--Dato Académico --> 
                    <div class="form-group">
-                       <label for="Estado">Dato Académico</label>
-                       <input type="text" class="form-control"  placeholder="Dato Académico">
+                       <label for="inputDatoAcademico">Dato Académico</label>
+                       <input type="text" class="form-control"  placeholder="Dato Académico" id="dato_academico"
+                       path="dato_academico" name="dato_academico">
                    </div>
+                   
                    <!-- Curriculum Vitae --> 
                    <div class="form-group">
-                       <label for="Estado">Curriculum Vitae</label>
-                       <input type="text" class="form-control"  placeholder="Curriculum Vitae">
+                       <label for="inputCurriculVitae">Curriculum Vitae</label>
+                       <input type="text" class="form-control"  placeholder="Curriculum Vitae" id="curriculum_vitae"
+                       path="curriculum_vitae" name="curriculum_vitae">
                    </div>
 
                    <!-- BOTON SIGUIENTE -->
