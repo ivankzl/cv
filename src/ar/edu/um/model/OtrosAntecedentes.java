@@ -19,6 +19,8 @@ public class OtrosAntecedentes{
 	public void setDni(BigDecimal dni) {
 		this.dni = dni;
 	}
+	
+	
 	public String getEstancias_pasantias() {
 		return estancias_pasantias;
 	}

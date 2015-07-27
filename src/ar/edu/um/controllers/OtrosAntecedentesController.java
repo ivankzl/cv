@@ -27,7 +27,7 @@ public class OtrosAntecedentesController {
 		this.otrosAntecedentesService = otrosAntecedentesService;
 	}
 	
-	@RequestMapping(value="/crearOtrosantecedentes", method=RequestMethod.POST)
+	@RequestMapping(value="/crearotrosantecedentes", method=RequestMethod.POST)
 	public String creaCargos(Model model, @Valid OtrosAntecedentes otrosAntecedentes, BindingResult result) {
 		if (result.hasErrors()){
 			System.out.println("no se valido el formulario");
