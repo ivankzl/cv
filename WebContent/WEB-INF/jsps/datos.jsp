@@ -53,7 +53,7 @@
 				        <li><a href="http://www.um.edu.ar/cv/cargos" role="button">Cargos</a></li>
 				        <li><a href="http://www.um.edu.ar/cv/antecedentes" role="button">Antecedentes</a></li>
 				        <li><a href="http://www.um.edu.ar/cv/produccion" role="button">Producción</a></li>
-				        <li><a href="http://www.um.edu.ar/cv/otrosantecedentes" role="button">Otros Antecedentes</li>
+				        <li><a href="http://www.um.edu.ar/cv/otrosantecedentes" role="button">Otros Antecedentes</a></li>
 				      </ul>
 				    </div>
 				</nav>
