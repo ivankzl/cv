@@ -48,7 +48,7 @@
 				<nav class="navbar navbar-default">
 				    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				      <ul class="nav navbar-nav">
-				        <li><a href="http://www.um.edu.ar/cv/datos" role="button">Datos Personales</a></li>
+						<li><a href="http://www.um.edu.ar/cv/datos" role="button">Datos Personales</a></li>
 				        <li><a href="http://www.um.edu.ar/cv/formacion" role="button">Formación</a></li>
 				        <li><a href="http://www.um.edu.ar/cv/cargos" role="button">Cargos</a></li>
 				        <li><a href="http://www.um.edu.ar/cv/antecedentes" role="button">Antecedentes</a></li>
@@ -543,7 +543,7 @@
 			
 
 				</form:form>
-			<!--container-->
+			</div><!--container-->
 		</div>
 	</div>
 
